@@ -1,7 +1,7 @@
-// C++ code
-// 
+//intiele boolean set
 bool set = false;
 
+//Pin setup om outputs te defineren
 void setup()
 {
 
@@ -15,9 +15,11 @@ void setup()
   pinMode(9, OUTPUT);  
 }
 
+//loop op de lampjes 1 voor 1 aan te laten gaan 
 void loop()
 {
   if(set == false){
+	  //ledjes van links naar rechts aan te laten gaan 1 voor 1
   	for(int i = 2; i <= 9; i++){
     	digitalWrite(i, HIGH);
     	digitalWrite(i-1, LOW);
@@ -27,7 +29,7 @@ void loop()
   }
   
   if(set == true){
-   
+	//hetzelfde als de vorige loop maar dan van rechts naar links
     for(int i = 9; i >= 2; i--){
     digitalWrite(i, HIGH);
     digitalWrite(i+1, LOW);
