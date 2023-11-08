@@ -1,9 +1,11 @@
+//Pin setup om outputs te defineren
 void setup()
 {
   pinMode(11, OUTPUT);
   pinMode(12, OUTPUT);
 }
 
+//loop om de ledjes om en om te laten knipperen
 void loop()
 {
   digitalWrite(11, HIGH);
